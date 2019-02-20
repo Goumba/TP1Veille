@@ -463,14 +463,10 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .menu a {
   text-decoration: none;
-  color: white;
-  border-bottom: 1px solid white;
+  color: #20242b;
   font-size: 1rem;
   padding: 0.5rem;
-}
-
-.menu a:first-child {
-  border-top: 1px solid white;
+  font-family: "Arimo", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -746,7 +742,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-image: url(../img/bg.png);
-  background-image: cover;
+  background-size: cover;
 }
 
 .global {
@@ -786,7 +782,7 @@ body {
 }
 
 .menu {
-  background-color: #c4dcfa;
+  background-color: #be7c00;
   position: fixed;
   left: 0;
   right: 0;
@@ -839,7 +835,6 @@ body {
 }
 
 .conteneur {
-  background-color: #fff;
   color: #444;
 }
 
@@ -900,7 +895,6 @@ body {
   }
   .menu a {
     border: none;
-    border-left: 1px solid white;
     /*Propriété comme item flex - peut s'étirer en largeur*/
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;

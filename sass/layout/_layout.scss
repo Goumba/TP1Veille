@@ -11,7 +11,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-image: url(../img/bg.png);
-	background-image: cover;
+	background-size: cover;
 }
 
 .global {
@@ -85,7 +85,7 @@ body {
 }
 
 .conteneur {
-	background-color: #fff;
+	//background-color: #fff;
 	color: #444;
 }
 /* conteneur est un élément flex et en même temps un conteneur grid */
@@ -145,7 +145,6 @@ body {
 
 		 a {
 				border: none;
-				border-left: 1px solid white;
 				/*Propriété comme item flex - peut s'étirer en largeur*/
 				flex: 1 0 auto;
 		
