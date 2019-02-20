@@ -22,14 +22,14 @@ body {
 	/*Conteneur flex en rangée*/
 	display: flex;
 	/*Poussée vers la gauche pour ne pas voir le menu*/
-	transform: translateX(-100%);
+	transform: translateX(100%);
 	/*Effet de transition sur la transformation*/
 	transition: transform 1s;
 	/*	overflow-x: hidden; */
 	}
 
 	.boutonBurger {
-		background: linear-gradient(to bottom, #E84545 0%, #E84545 20%, transparent 20%, transparent 40%, #E84545 40%, #E84545 60%, transparent 60%, transparent 80%, #E84545 80%, #E84545 100%);
+		background: linear-gradient(to bottom, rgb(190, 124, 0) 0%, rgb(190, 124, 0) 20%, transparent 20%, transparent 40%, rgb(190, 124, 0) 40%, rgb(190, 124, 0) 60%, transparent 60%, transparent 80%, rgb(190, 124, 0) 80%, rgb(190, 124, 0) 100%);
 		height: 48px;
 		width: 48px;
 		margin: 1%;
@@ -42,13 +42,8 @@ body {
 	.menu {
 		background-color : $color__menu-nav;
 		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		height: 8vh;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
+		
 	}
 	.gauche>a{
 		font-size: 1.8em;
@@ -127,6 +122,27 @@ body {
 
 		min-width: 500px;
 	}
+
+	.menu{
+		bottom: 0;
+		right: 0;
+		height: 100vh;
+		width: 20vw;
+		flex-direction: column;
+	}
+	.gauche{
+		margin-left: 2vw;
+		margin-top: 3vh;
+		width: 10px;
+	}
+	.droite{
+		margin-left: 2vw;
+		margin-top: 1vh;
+	   width: 10px;
+   }
+   .droite>a{
+	   font-size: 1.2em;
+   }
 }
 
 @media only screen and (min-width: 900px) {
@@ -147,7 +163,12 @@ body {
 		/*Affichage du menu en rangée*/
 		flex-direction: row;
 		justify-content: space-between;
-
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 8vh;
+		width: 100vw;
+		align-items: center;
 		 a {
 				border: none;
 				/*Propriété comme item flex - peut s'étirer en largeur*/
@@ -159,12 +180,18 @@ body {
 			}
 		 }	
 		 .gauche{
+			margin-top: 0vh;
+			width: 400px;
 			 margin-left: 1.5vw;
 		 }
 		 .droite{
+			margin-left: 0vw;
 			margin-right: 1.5vw;
+			width: 500px;
 		}
-		
+		.droite>a:hover{
+			background-color: rgb(128, 83, 0);
+		}
 	}
 
 	.conteneur {

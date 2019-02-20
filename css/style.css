@@ -756,8 +756,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   /*Poussée vers la gauche pour ne pas voir le menu*/
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   /*Effet de transition sur la transformation*/
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
@@ -767,8 +767,8 @@ body {
 }
 
 .boutonBurger {
-  background: -webkit-gradient(linear, left top, left bottom, from(#E84545), color-stop(20%, #E84545), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #E84545), color-stop(60%, #E84545), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #E84545), to(#E84545));
-  background: linear-gradient(to bottom, #E84545 0%, #E84545 20%, transparent 20%, transparent 40%, #E84545 40%, #E84545 60%, transparent 60%, transparent 80%, #E84545 80%, #E84545 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#be7c00), color-stop(20%, #be7c00), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #be7c00), color-stop(60%, #be7c00), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #be7c00), to(#be7c00));
+  background: linear-gradient(to bottom, #be7c00 0%, #be7c00 20%, transparent 20%, transparent 40%, #be7c00 40%, #be7c00 60%, transparent 60%, transparent 80%, #be7c00 80%, #be7c00 100%);
   height: 48px;
   width: 48px;
   margin: 1%;
@@ -784,20 +784,9 @@ body {
 .menu {
   background-color: #be7c00;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .gauche > a {
@@ -881,6 +870,29 @@ body {
         grid-template-areas: "header   header" "sidebar  content" "sidebar2 sidebar2" "footer   footer";
     min-width: 500px;
   }
+  .menu {
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 20vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gauche {
+    margin-left: 2vw;
+    margin-top: 3vh;
+    width: 10px;
+  }
+  .droite {
+    margin-left: 2vw;
+    margin-top: 1vh;
+    width: 10px;
+  }
+  .droite > a {
+    font-size: 1.2em;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -906,6 +918,14 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8vh;
+    width: 100vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .menu a {
     border: none;
@@ -918,10 +938,17 @@ body {
     border-top: none;
   }
   .menu .gauche {
+    margin-top: 0vh;
+    width: 400px;
     margin-left: 1.5vw;
   }
   .menu .droite {
+    margin-left: 0vw;
     margin-right: 1.5vw;
+    width: 500px;
+  }
+  .menu .droite > a:hover {
+    background-color: #805300;
   }
   .conteneur {
     grid-gap: 20px;
