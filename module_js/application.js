@@ -7,7 +7,7 @@ import {AnimLettre} from './AnimLettre.js' //
 /* l'élement de la page qui contiendra les éléments créés dynamiquement */
 let elmHeader = document.querySelector('.titre')
 //let intro = new Introduction(contenuIntro, elmHeader, animationLettre)
-const lesLettres = 'Big Robot'
+const lesLettres = 'Gros Robot'
 let  monAnimLettre = new AnimLettre(lesLettres, elmHeader, finAnim);
 
 // debutQuestionnaire()
