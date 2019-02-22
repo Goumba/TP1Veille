@@ -751,14 +751,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.texteApparaissant:nth-of-type(2) {
+  top: 40vh;
+  font-size: 1.6em;
+}
+
+.texteApparaissant:nth-of-type(3) {
+  top: 50vh;
+  font-size: 1.4em;
 }
 
 .gauche > a {
   font-size: 1.2em;
+  margin-left: 2vw;
 }
 
 .mot > div {
   font-size: 1.3em;
+  margin-left: 2vw;
 }
 
 #chkBoutonBurger:checked ~ .global {
@@ -860,16 +880,6 @@ body {
   .droite > a {
     font-size: 1.2em;
   }
-}
-
-.texteApparaissant:nth-of-type(2) {
-  top: 40vh;
-  font-size: 1.6em;
-}
-
-.texteApparaissant:nth-of-type(3) {
-  top: 50vh;
-  font-size: 1.4em;
 }
 
 @media only screen and (min-width: 900px) {
