@@ -47,9 +47,11 @@ big {
 .texteApparaissant{
 	font-family: $font_home;
 }
-.texteApparaissant:nth-of-type(2){
-	font-family: $font_menu;
-}
+
 .menu {
 	font-family: $font_menu;
+}
+
+.deuxiemeAnim{
+	font-family: $font_home !important;
 }

@@ -438,12 +438,12 @@ big {
   font-family: "Coda Caption", sans-serif;
 }
 
-.texteApparaissant:nth-of-type(2) {
+.menu {
   font-family: "Sarpanch", sans-serif;
 }
 
-.menu {
-  font-family: "Sarpanch", sans-serif;
+.deuxiemeAnim {
+  font-family: "Coda Caption", sans-serif !important;
 }
 
 /*--------------------------------------------------------------
