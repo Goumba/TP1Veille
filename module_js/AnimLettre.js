@@ -37,7 +37,7 @@ export class AnimLettre {
 		//Avec une boucle for of, on attribue à chaque lettre la classe animNoel
 		// motNoel.length
 		for (let i=0; i<lesLettres.length;i++) {
-			let elmMot = this.creerElement(elmConteneur,'div', lesLettres[i], '');
+            let elmMot = this.creerElement(elmConteneur,'div', lesLettres[i], 'mot');
 			elmMot.style.animationDelay = (i * 0.5) + "s";
 		}
     }
