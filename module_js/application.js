@@ -2,7 +2,6 @@ console.log('application');
 import {contenuIntro} from './contenuIntro.js' // le contenu de l'intoduction */
 import {Introduction} from './Introduction.js' //
 import {AnimLettre} from './AnimLettre.js' //
-import {AnimDeux} from './AnimDeux.js' //
 
 
 /* l'élement de la page qui contiendra les éléments créés dynamiquement */
@@ -20,7 +19,6 @@ function animationLettre()
 	console.log('debut animation lettre')
 	const lesLettres = 'Très Gros Robot'
 	let  monAnimLettre = new AnimLettre(lesLettres, elmHeader, finAnim);
-	let  monAnimDeux = new AnimDeux(lesLettres, elmHeader, finAnim);	
 }
 
 

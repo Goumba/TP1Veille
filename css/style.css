@@ -486,12 +486,9 @@ a:hover, a:active {
   width: 100vw;
 }
 
-.rectangle {
+.texteApparaissant {
   min-height: 2em;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -503,43 +500,10 @@ a:hover, a:active {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
-}
-
-/* À COMPLÉTER - Caractéristiques de chaque rectangle de l'intro...
-   ========================================================================== */
-.rectangle:first-of-type,
-.rectangle:last-of-type {
-  /* Le 1er et le dernier rectangle sont centrés sur une seule ligne...*/
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-}
-
-.rectangle:nth-child(1) {
-  background-color: #e54792;
-  -webkit-animation: anim1 0.5s;
-          animation: anim1 0.5s;
-}
-
-.rectangle:nth-child(2) {
-  background-color: #f59723;
-  -webkit-animation: anim2 0.5s 0.5s backwards;
-          animation: anim2 0.5s 0.5s backwards;
-}
-
-.rectangle:nth-child(3) {
-  background-color: #58b34c;
-  -webkit-animation: anim3 0.5s 1s backwards;
-          animation: anim3 0.5s 1s backwards;
-}
-
-.rectangle:nth-child(4) {
-  background-color: #006d98;
-  font-size: 1em;
-  /* max-height : 20vh;*/
-  -webkit-animation: animGo 1s 1.5s backwards;
-          animation: animGo 1s 1.5s backwards;
+  -webkit-animation: anim1 1s backwards;
+          animation: anim1 1s backwards;
+  color: white;
+  font-weight: bold;
 }
 
 .deplacementContenuIntro {
@@ -549,23 +513,23 @@ a:hover, a:active {
 
 @-webkit-keyframes anim1 {
   from {
-    -webkit-transform: translateY(-50vh) rotate(-45deg);
-            transform: translateY(-50vh) rotate(-45deg);
+    -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
   }
   to {
-    -webkit-transform: translateY(0%) rotate(0);
-            transform: translateY(0%) rotate(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 @keyframes anim1 {
   from {
-    -webkit-transform: translateY(-50vh) rotate(-45deg);
-            transform: translateY(-50vh) rotate(-45deg);
+    -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
   }
   to {
-    -webkit-transform: translateY(0%) rotate(0);
-            transform: translateY(0%) rotate(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 

@@ -30,12 +30,23 @@ export class Introduction {
         /* Création des élément DOM qui seront animés. 
         Les éléments seront intégré dans le conteneur elmParent
         */
+        let globalCont = document.querySelector('.global');
         console.log('introduction')
         let elmConteneur = this.creerElement(this.elmParent,
             'section',
             '',
             'introduction')
+        
+        let elmPrincipale = this.creerElement(globalCont,
+            'div',
+            this.titrePrincipal,
+            'texteApparaissant')
 
+        let elmSecondaire = this.creerElement(globalCont,
+            'div',
+            this.titreSecondaire,
+            'texteApparaissant')    
+        
         let elmBouton = document.querySelector(".deuxiemeAnim");
         /* On garde une référence sur la fonction terminerIntro */
         let refTerminerIntro = this.terminerIntro.bind(this)
