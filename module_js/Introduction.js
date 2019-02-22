@@ -30,7 +30,7 @@ export class Introduction {
         /* Création des élément DOM qui seront animés. 
         Les éléments seront intégré dans le conteneur elmParent
         */
-        let globalCont = document.querySelector('.global');
+        let globalCont = document.querySelector('body');
         console.log('introduction')
         let elmConteneur = this.creerElement(this.elmParent,
             'section',

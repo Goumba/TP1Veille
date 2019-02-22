@@ -113,6 +113,13 @@ body {
 			"footer"
 }
 
+.texteApparaissant{
+	position: fixed;
+	left: 20vw;
+	z-index:-2;
+
+}
+
 @media only screen and (min-width: 500px) {
 	.conteneur {
 
@@ -126,13 +133,11 @@ body {
 		min-width: 500px;
 	}
 
-	.menu{
-		bottom: 0;
-		right: 0;
-		height: 100vh;
-		width: 20vw;
-		flex-direction: column;
+	.texteApparaissant{
+		left: 25vw;
 	}
+
+	
 	.gauche{
 		margin-left: 2vw;
 		margin-top: 3vh;
@@ -148,8 +153,20 @@ body {
    }
 }
 
-@media only screen and (min-width: 900px) {
+.texteApparaissant:nth-of-type(2){
+	top: 40vh;
+	font-size: 1.6em;
+}
+.texteApparaissant:nth-of-type(3){
+	top: 50vh;
+	font-size: 1.4em;
+}
 
+
+@media only screen and (min-width: 900px) {
+	.texteApparaissant{
+		left: 40vw;	
+	}
 	.boutonBurger {
 		display: none
 	}
