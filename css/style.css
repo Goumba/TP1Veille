@@ -776,6 +776,10 @@ body {
   margin-left: 2vw;
 }
 
+.droite {
+  width: 300px !important;
+}
+
 .mot > div {
   font-size: 1.3em;
   margin-left: 2vw;
